@@ -1,7 +1,7 @@
 html {
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
-    overflow:hidden;
+    /*overflow:hidden;*/
   }
   
   #navbar{
@@ -65,12 +65,26 @@ html {
   }
   
   @media (max-width: 600px) {
+    body {
+      display: grid;
+  grid-template-columns: 1fr;
+    }
+    
     #navbar {
-      width:40%;
+      position: absolute;
+      width:100%;
+      border-right:none;
+    }
+
+    nav li{
+      padding-right: 0;
     }
     #main-doc {
-      margin-left:40%;
-      width:50%
+      position: absolute;
+      top:700px;
+      margin-left:0;
+      padding-right: 20px;
+      width:100%;
     }
   }
   
